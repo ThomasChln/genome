@@ -15,3 +15,5 @@ run R -e "devtools::install_github('genometra/SNPediaR/pkg')"
 run apt-get install pandoc -y
 run R -e "install.packages('rmarkdown')"
 run R -e "install.packages('DT')"
+
+run R -e "install.packages('digest')"
