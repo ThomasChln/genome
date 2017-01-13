@@ -17,3 +17,4 @@ run R -e "install.packages('rmarkdown')"
 run R -e "install.packages('DT')"
 
 run R -e "install.packages('digest')"
+run R -e "install.packages('flexdashboard')"
