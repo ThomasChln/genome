@@ -1,0 +1,32 @@
+---
+title: Genome
+output:
+  flexdashboard::flex_dashboard:
+    orientation: rows
+params:
+    genome:
+        value: x
+---
+
+# About
+
+###
+
+```{r}
+shiny::includeMarkdown('README.md')
+```
+
+###
+
+```{r}
+shiny::includeMarkdown('disclaimers.md')
+```
+
+# Table report
+
+```{r, echo = FALSE, warning = FALSE}
+library(magrittr)
+source('genome_utils.R')
+
+params$genome %>% load_or_compute %>% tidy_df %>% render_datatable
+```
