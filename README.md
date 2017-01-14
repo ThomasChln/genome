@@ -42,3 +42,5 @@ file_path=5582.23andme.4073
 docker run -v `pwd`:`pwd` -w `pwd` --rm -t thomaschln/genome \
   R -e "rmarkdown::render('SNPdiagnostic.Rmd', params = list(genome = '$file_path'))"
 ```
+
+An example report is available at https://github.com/ThomasChln/genome/blob/master/SNPdiagnostic.html
